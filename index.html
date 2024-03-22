@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <script>
+
+        var a = prompt("input a number for 1st side: ");
+        var b = prompt("input a number for 2nd side: ");
+        var c = prompt("input a number for 3rd side: ");
+
+        var undefinedA = isNaN(a);
+        var undefinedB = isNaN(b);
+        var undefinedC = isNaN(c);
+
+        function determineTriangle(a, b, c)
+        {
+            if (a == b && b == c && a == c)
+            {
+                window.alert("The triangle is an equilateral triangle");
+            }
+
+            else if (a == b || b == c || a == c)
+            {
+                window.alert("The triangle is an isosceles triangle");
+            }
+
+            else
+            {
+                window.alert("The triangle is a scalene triangle")
+            }
+        }
+        function refreshPage() {
+
+            location.reload(); 
+        }
+        if (undefinedA == true || undefinedB  == true || undefinedC  == true)
+        {
+            alert("Error, please input new numbers.");
+            refreshPage() 
+        }
+        else
+        {
+            determineTriangle(a, b, c);
+            refreshPage() 
+        }
+
+    </script>
+</body>
+</html>
